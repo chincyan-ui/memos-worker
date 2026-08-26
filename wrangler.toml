@@ -1,23 +1,14 @@
 name = "memos-worker"
-compatibility_date = "2025-08-19"
-main = "src/index.js"
-[assets]
-directory = "./src/public"
-run_worker_first = [
-	"/api/*"
-]
+main = "src/index.js" # 或者 src/index.ts，根据项目实际结构而定
+compatibility_date = "2024-01-01"
 
+# 1. 绑定 D1 数据库
 [[d1_databases]]
-binding = "DB"
-database_id = "YOUR_D1_DATABASE_ID"
-database_name = "YOUR_D1_DATABASE_NAME"
+binding = "DB"              # 代码中调用的变量名，保持默认
+database_name = "memos-db"      # 你在 Cloudflare 创建的 D1 数据库名
+database_id = "17e09052-5e6a-4b11-b66f-df276ed545c7"    # 替换为你的真实 ID
 
-[[kv_namespaces]]
-binding = "NOTES_KV"
-id = "YOUR_KV_NAMESPACE_ID"
-preview_id = ""
-
+# 2. 绑定 R2 存储桶（如果需要支持图片上传）
 [[r2_buckets]]
-binding = "NOTES_R2_BUCKET"
-bucket_name = "YOUR_R2_BUCKET_NAME"
-preview_bucket_name = "notes-files-preview"
+binding = "BUCKET"                           # 代码中调用的变量名，保持默认
+bucket_name = "memos-r2"                    # 你在 Cloudflare 创建的 R2 桶名
