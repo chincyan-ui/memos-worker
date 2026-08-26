@@ -1,4 +1,4 @@
-[中文](./README_zh.md)
+
 
 # Memos Worker: A Cloudflare-Powered Notes and Knowledge Base
 
