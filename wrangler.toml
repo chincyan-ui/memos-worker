@@ -18,7 +18,7 @@ database_id = "17e09052-5e6a-4b11-b66f-df276ed545c7"    # 替换为你的真实 
 
 [[kv_namespaces]]
 binding = "NOTES_KV"
-id = "YOUR_KV_NAMESPACE_ID"
+id = "536f43c4bfac4da688c1f938e4a4ff82"
 preview_id = ""
 
 [[r2_buckets]]
